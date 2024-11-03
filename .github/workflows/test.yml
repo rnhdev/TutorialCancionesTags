@@ -30,8 +30,8 @@ jobs:
           args: >
             -Dsonar.organization=rnhuni
             -Dsonar.projectKey=rnhuni_TutorialCancionesTags
-            -Dsonar.projectBaseDir=src
-            -Dsonar.sources=.
+            -Dsonar.projectBaseDir=.
+            -Dsonar.sources=./src
             -Dsonar.coverageReportPaths=coverage.xml
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
