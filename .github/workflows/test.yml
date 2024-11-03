@@ -22,8 +22,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Correr pruebas
         run: |
-          coverage run -m unittest discover -s tests
-          coverage xml
+          python -m coverage run -m unittest discover -s tests -v
+          python -m coverage xml
       - name: Run SonarCloud Scan for ServicioFacturacion
         uses: SonarSource/sonarcloud-github-action@v2
         with:
@@ -31,5 +31,7 @@ jobs:
             -Dsonar.organization=rnhuni
             -Dsonar.projectKey=rnhuni_TutorialCancionesTags
             -Dsonar.projectBaseDir=.
+            -Dsonar.sources=src
+            -Dsonar.python.coverage.reportPaths=coverage.xml
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
