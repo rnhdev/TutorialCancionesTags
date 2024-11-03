@@ -32,6 +32,6 @@ jobs:
             -Dsonar.projectKey=rnhuni_TutorialCancionesTags
             -Dsonar.projectBaseDir=.
             -Dsonar.sources=src
-            -Dsonar.coverageReportPaths=coverage.xml
+            -Dsonar.python.coverage.reportPaths=coverage.xml
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
