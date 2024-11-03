@@ -29,7 +29,7 @@ jobs:
         with:
           args: >
             -Dsonar.organization=rnhdev
-            -Dsonar.projectKey=sonar.projectKey=rnhdev_TutorialCancionesTags
+            -Dsonar.projectKey=rnhdev_TutorialCancionesTags
             -Dsonar.projectBaseDir=.
             -Dsonar.sources=.
             -Dsonar.python.coverage.reportPaths=coverage.xml
