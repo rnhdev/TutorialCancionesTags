@@ -23,7 +23,7 @@ jobs:
       - name: Correr pruebas
         run: |
           coverage run -m unittest discover -s tests
-          coverage xml
+          coverage xml -o coverage.xml
       - name: Run SonarCloud Scan for ServicioFacturacion
         uses: SonarSource/sonarcloud-github-action@v2
         with:
