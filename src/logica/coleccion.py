@@ -44,6 +44,50 @@ class Coleccion():
         except:
             return False
 
+    def eliminar_album_1(self, album_id):
+        try:
+            album = session.query(Album).filter(Album.id == album_id).first()
+            session.delete(album)
+            session.commit()
+            return True
+        except:
+            return False
+
+    def eliminar_album_2(self, album_id):
+        try:
+            album = session.query(Album).filter(Album.id == album_id).first()
+            session.delete(album)
+            session.commit()
+            return True
+        except:
+            return False
+    def eliminar_album_3(self, album_id):
+        try:
+            album = session.query(Album).filter(Album.id == album_id).first()
+            session.delete(album)
+            session.commit()
+            return True
+        except:
+            return False
+            
+    def eliminar_album_4(self, album_id):
+        try:
+            album = session.query(Album).filter(Album.id == album_id).first()
+            session.delete(album)
+            session.commit()
+            return True
+        except:
+            return False
+            
+    def eliminar_album_5(self, album_id):
+        try:
+            album = session.query(Album).filter(Album.id == album_id).first()
+            session.delete(album)
+            session.commit()
+            return True
+        except:
+            return False
+
     def dar_albumes(self):
         albumes = [elem.__dict__ for elem in session.query(Album).all()]
         for album in albumes:
