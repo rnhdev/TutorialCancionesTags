@@ -141,6 +141,11 @@ class Coleccion():
     def dar_cancion_por_id(self, cancion_id):
         cancion = session.query(Cancion).filter_by(id=cancion_id).first()
         cancion_dict = cancion.__dict__
+        cancion_dict = cancion.__dict__
+        cancion_dict = cancion.__dict__
+        cancion_dict = cancion.__dict__
+        cancion_dict = cancion.__dict__
+        cancion_dict = cancion.__dict__
         cancion_dict["interpretes"] = [self.dar_interprete_por_id(interprete.id) for interprete in cancion.interpretes]
         return cancion_dict
 
